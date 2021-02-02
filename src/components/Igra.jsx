@@ -46,7 +46,15 @@ export default function Igra(props) {
 
     if (brojPokusaja === 0) {
         return (
-            <h1>Niste uspeli da pogodite rec</h1>
+            <>
+                <h1>Niste uspeli da pogodite rec</h1>
+                <button className='btn btn-primary mt-2 ml-5' onClick={() => {
+                    setKraj(false);
+                    setBrojPokusaja(5);
+                    setIskorisceno([]);
+                    setIndex(Math.floor(Math.random() * props.reci.length))
+                }}>Pokusajte ponovo</button>
+            </>
         )
     }
     return (
