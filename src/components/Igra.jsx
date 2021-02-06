@@ -11,7 +11,7 @@ export default function Igra(props) {
     const [kraj, setKraj] = useState(false);
     useEffect(() => {
         const ind = Math.random() * props.reci.length;
-        console.log(Math.floor(ind));
+        setKraj(false);
         setIndex(Math.floor(ind));
         setBrojPokusaja(5);
         setIskorisceno([]);
@@ -21,7 +21,7 @@ export default function Igra(props) {
         const noviNiz = [...iskorisceno, slovo];
         let flag = true;
         for (const sl of props.reci[index].split('')) {
-            if (!noviNiz.includes(sl)) {
+            if (!noviNiz.includes(sl) && sl !== ' ') {
                 flag = false;
                 break;
             }

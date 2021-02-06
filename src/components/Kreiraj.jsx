@@ -7,8 +7,9 @@ export default function Kreiraj(props) {
             <div className='row mt-2'>
                 <form >
                     <label>Rec</label>
-                    <input type="text" className='form-control' onChange={(e) => {
+                    <input type="text" className='form-control' value={rec} onChange={(e) => {
                         const value = e.target.value;
+
                         setRec(value);
                     }} />
                     <button className='btn btn-primary form-control mt-2' onClick={(e) => {

@@ -7,10 +7,7 @@ import Kreiraj from './components/Kreiraj';
 import Navbar from './components/Navbar';
 function App() {
   const [reci, setreci] = useState([])
-  useEffect(() => {
-    console.log('regresh');
 
-  })
   const kreiraj = (rec) => {
     setreci(prev => {
       return [...prev, rec]
